@@ -7,11 +7,25 @@ const ingredients = [
   'Condiments',
 ];
 
-const itemEl = document.createElement('li');
-itemEl.classList.add('item')
-console.log(itemEl)
+const listEl=document.querySelector('#ingredients')
 
-for (const ingredient of ingredients) {
-  console.log(ingredient)
-  itemEl.textContent = ingredient;
+for (let i = 0; i < ingredients.length; i += 1) {  
+  const itemEl = document.createElement('li');
+  itemEl.classList.add('item')  
+  itemEl.textContent = ingredients[i];
+  listEl.append(itemEl)
+  
 }
+
+
+
+
+ 
+
+
+
+
+
+
+
+
