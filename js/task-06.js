@@ -5,14 +5,15 @@ textInput.addEventListener('blur', onInputBlur);
 
 function onInputBlur(element) {
     const inp = element.currentTarget;   
-    const inputLength = textInput.value.length
+    const inputLength = inp.value.length;
    
-    if (inputLength === Number(textInput.dataset.length)) {
-        textInput.classList.add('valid');        
+    if (inputLength === Number(inp.dataset.length)) {
+        inp.classList.remove('invalid')
+        inp.classList.add('valid');        
     } else {
-        textInput.classList.replace('valid','invalid');
-        // textInput.classList.remove('valid');
-        // textInput.classList.add('invalid');  
+        
+        inp.classList.remove('valid');
+        inp.classList.add('invalid');  
 
     }
 }
