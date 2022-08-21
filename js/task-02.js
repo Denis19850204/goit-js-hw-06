@@ -9,6 +9,8 @@ const ingredients = [
 
 const ingredientsEl = document.querySelector('#ingredients')
 
+const elementEl = [];
+
 
 // for (let i = 0; i < ingredients.length; i += 1) {  
 //   const itemEl = document.createElement('li');
@@ -21,8 +23,11 @@ const ingredientsToChange = ingredients.map(ingredient => {
   const element = document.createElement('li');
   element.classList.add('item');
   element.textContent = ingredient;
-  ingredientsEl.append(element);
-})
+  
+  elementEl.push(element);
+});
+
+ingredientsEl.append(...elementEl);
 
 
 
