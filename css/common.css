@@ -28,15 +28,13 @@ button {
 
 .photo {
   list-style: none;
-  display: flex;
+ display: flex;
 }
 
 .photo:not(:last-child){
   margin-bottom: 10px;
 }
 
-img {
-  max-width: 500px;
-}
+
 
 

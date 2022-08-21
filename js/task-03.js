@@ -13,10 +13,17 @@ const images = [
   },
 ];
 
-const listEl = document.querySelector(".gallery");
+const galleryEl = document.querySelector(".gallery");
 
-for (const image of images) {
-  const imageEl = `<li class=photo><img src='${image.url}' alt='${image.alt}'</li>`;
+const imagesToAdd = images
+  .map(
+    (image) =>
+      `<li class=photo><img src=${image.url}, alt=${image.alt}, 
+  width=300px></li>`
+  )
+  .join(" ");
 
-  listEl.insertAdjacentHTML("beforeend", imageEl);
-}
+galleryEl.insertAdjacentHTML("afterbegin", imagesToAdd);
+
+console.log(imagesToAdd);
+
